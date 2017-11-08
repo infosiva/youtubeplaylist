@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+<div class="row">  
+  <ng-container *ngFor="let item of model">        
+      <div *ngIf="item.snippet.thumbnails" class="col-lg-4 col-sm-6 col-xs-12">
+            <div style=" position: relative;">
+                <div class="col">
+                    <img [src]="item.snippet.thumbnails.default.url">
+                </div>                
+              <div class="bottomleft videotitle-text">{{item.snippet.title}}</div>
+              <div class="bottomright">
+                  <img href='#' src="/assets/IMAGES/play_button.png" (click)="loadVideoPlayer(item)">
+                </div>  
+              </div>               
+            <div class="text-gradient-publishedAt videopublised-text">
+              Published on {{ formatDate(item.snippet.publishedAt) }}
+            </div>
+            <div class="text-gradient videodesc-text">
+              {{item.snippet.description}}
+            </div>
+      </div>
+  </ng-container>  
+</div>
+<div>
+  <ul class="pager">
+    <li><button [disabled]="metadata && !metadata.prevPageToken" class="btn btn-default" (click)='getPlaylist_Page(metadata.nextPageToken, "prev", $event)'>Previous</button></li>
+    <li><button [disabled]="metadata && !metadata.nextPageToken" class="btn btn-default" (click)='getPlaylist_Page(metadata.prevPageToken, "next", $event)'>Next</button></li>
+  </ul>     
+</div>

@@ -1,0 +1,130 @@
+html,body { 
+  height: 100%;   
+}
+@font-face {
+  font-family: 'AlfaSlabOne-Regular';    
+  src: url('./assets/FONTS/Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto Regular';  
+  src: url('./assets/FONTS/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto Black';  
+  src: url('./assets/FONTS/Roboto/Roboto-Black.ttf');
+}
+
+.container {
+  max-width: 80em;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 33.33%;
+  }
+}
+.topheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+#logo
+{       
+  width: 400px;
+  height: auto;
+}
+.banner_div {
+    background-image: url("assets/IMAGES/main_bg.png");
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-size:cover;
+}
+.videopublised-text{
+  font-family: 'Roboto Regular' ;  
+  margin-bottom: 10px;
+}
+.videodesc-text{
+  font-family: 'Roboto Black';  
+}
+.videotitle-text
+{
+  font-family: AlfaSlabOne-Regular;
+  color: #4CE1BB;  
+  width: 50%;
+}
+.videotitle-text-nowrap
+{
+  font-family: AlfaSlabOne-Regular;
+  color: #4CE1BB;  
+}
+.text-gradient {
+	background: -webkit-linear-gradient(#eeeeee6b, #f5f5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-publishedAt {
+	background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bottomleft {
+    position: absolute;
+    bottom: 20px;    
+    font-size: 18px;
+}
+.bottomright {
+    position: absolute;
+    bottom: 20px;    
+    right : 20px;    
+    font-size: 18px;
+}
+.backtolist {
+  padding: 10px; 
+  color: #4CE1BB;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col {
+   flex: 0 0 calc(33.33% - 30px);
+   margin: 5px;
+}
+@media only screen and (min-width: 640px) {
+  .layout {
+    display: flex;
+  }
+}
+body {
+  margin: 1.5em;
+}
+.playercontainer {
+  max-width: 60em;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col {
+  padding: 1em;
+  margin: 0 2px 2px 0;    
+}  
+img { 
+    width: 100%;
+}
+.col-player {
+  flex: 3;  
+}  
+.col-videodetails {
+  flex: 1;  
+}

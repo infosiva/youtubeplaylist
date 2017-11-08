@@ -1,0 +1,23 @@
+<router-outlet></router-outlet>
+<div class="playercontainer">
+<div class="layout">
+        <p class="col col-player">
+                <iframe [src]='safeURL' frameborder="0" allowfullscreen width="100%"></iframe>                  
+        </p>
+        <div class="col col-videodetails">
+                <p class='videotitle-text-nowrap'>
+                        {{videoDetails.videoname }}
+                </p>
+                <p class="text-gradient-publishedAt videopublised-text">
+                                Published on {{videoDetails.publishedon }}
+                </p>
+                <p class="text-gradient videodesc-text">
+                        {{videoDetails.desc }}
+                </p>
+                <a (click)='backlist()'>
+                        <img src="/assets/IMAGES/back_arrow.png" style="width:10% !important">
+                        <a (click)='backlist()' class='backtolist'>Back to list</a> 
+                </a>    
+        </div>  
+</div>        
+</div>
